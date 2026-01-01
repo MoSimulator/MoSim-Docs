@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# Model Preparation
+# CAD Exporting
 
 This modding documentation is intended to be a follow-along development of team 9496’s 2025 robot. Additional notes are also provided to serve as more general information.
 
