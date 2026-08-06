@@ -33,7 +33,7 @@ GLTF files keep the file structure as it is in CAD, meaning subassemblies are se
 If you're new to Blender, you can find the official UI docs [here](https://docs.blender.org/manual/en/latest/interface/index.html).
 :::
 
-Now we will open the model in blender by simply dragging it on to the blender window. Remember to delete the light, camera, and cube that are in the scene by default. I also highly recommend checking Merge Vertices, Onshape tends to generate duplicate vertices and this is a free optimization.
+Now we will open the model in Blender by simply dragging it on to the Blender window. Remember to delete the light, camera, and cube that are in the scene by default. I also highly recommend checking Merge Vertices, Onshape tends to generate duplicate vertices and this is a free optimization.
 
 :::info
 
@@ -45,7 +45,7 @@ This takes a while and will frequently report NOT RESPONDING, on windows, just g
 
 :::note
 
-If your computer consistently crashes or fails to import to blender you can alternatively export to Collada, HOWEVER, it will be less performant and will make your editor experience worse and the end user experience worse.
+If your computer consistently crashes or fails to import to Blender you can alternatively export to Collada, HOWEVER, it will be less performant and will make your editor experience worse and the end user experience worse.
 
 <img src="/img/lynk/colladaexport.png" alt="Alternate OnShape Export" width="50%"/>
 
@@ -59,7 +59,7 @@ Often when importing from CAD, the robot will come in horizontally. To fix this:
 3. Rotate the robot 90 degrees in the X axis (This is most common)
 4. Ensure the robot is touching the floor
 
-If you are familiar with blender now is your chance to optimize the model. The more time you spend now, the more performance the end user will have.
+If you are familiar with Blender, now is your chance to optimize the model. The more time you spend now, the more performance the end user will have.
 
 <div>
 <img src="/img/modeling/3dcursor.png" alt="Select 3d Cursor" width="35%"/>
@@ -154,7 +154,7 @@ If you are familiar with blender now is your chance to optimize the model. The m
   </TabItem>
 </Tabs>  
 
-## Exporting
+## Export from Blender
 
 Once you are happy click `File -> Export -> FBX`, then export to `[Team Number]([Year]).fbx`
 You can now close Blender, and delete the `.gltf` file.

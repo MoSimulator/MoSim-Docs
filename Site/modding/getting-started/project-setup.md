@@ -26,6 +26,10 @@ Unity Hub is as a launcher for your Unity versions and projects. You can downloa
 
 MoSimulator depends on some Git packages to open in the editor, you can download it [here](https://git-scm.com/install/).
 
+### Blender (recommended)
+
+Most robot CADs have a lot of excess detail that hurts in-game performance, so we use Blender to optimize the models before putting them in Unity (We go in detail on this process on the next page). You can download Blender [here](https://www.blender.org/download/) or on Steam
+
 ### Github Desktop (optional)
 
 This is the easiest way to get into version control, you can download it [here](https://desktop.github.com/download/). More experienced programmers may elect to use other tools for this, but it ultimately does the same thing. 
