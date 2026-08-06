@@ -12,7 +12,7 @@ Export the assembly to GLTF, the normal naming scheme for models is `team name o
 
 :::note
 
-If you have the ability to copy and or it is your teams CAD, it is highly recommended you swap to simplified swerve modules as they are a HUGE performance drain
+If you have the ability to copy and/or it is your teams CAD, it is highly recommended you swap to simplified swerve modules as they are a HUGE performance drain
 
 :::
 

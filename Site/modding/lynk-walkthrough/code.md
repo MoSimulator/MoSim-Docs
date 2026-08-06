@@ -9,7 +9,7 @@ Open the Lynk.cs File and ctrlA backspace.
 The following is a blank template for a robot:
 
 ```cs title="/src/components/Lynk.cs"
-Namespace Prefabs.Reefscape.Robots._9496
+namespace Prefabs.Reefscape.Robots._9496
 {
     public class Lynk: ReefscapeRobotBase
     {
