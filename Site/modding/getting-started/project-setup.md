@@ -1,5 +1,8 @@
 ---
 sidebar_position: 1
+id: project-setup
+title: 🛠️ Project Setup
+sidebar_label: 🛠️ Project Setup
 ---
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
@@ -74,7 +77,7 @@ This is the link to our public repository: https://github.com/MoSimulator/MoSimu
 * If you selected properly, it will ask you if you want to install the correct version of Unity, click yes. You can keep the default modules checked
 * Once the download is complete, you will be able to open the project.
 
-:::note
+:::info
 
 The editor takes a long time to download.
 

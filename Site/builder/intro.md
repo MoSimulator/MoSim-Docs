@@ -4,6 +4,6 @@ sidebar_position: 1
 
 # Builder Docs
 
-Coming Soon
+Coming Soon to [docs.mosimulator.com](https://docs.mosimulator.com/)
 
-[Find Alpha Docs here](https://github.com/masonmm3/MoSimBuilder)
+Builder Beta and its docs can be found [here](https://github.com/masonmm3/MoSimBuilder)
