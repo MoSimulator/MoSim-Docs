@@ -19,7 +19,7 @@ If you have the ability to copy or edit the CAD model, it is highly recommended 
 
 :::
 
-Export the assembly to GLTF, the normal naming scheme for models is `team name or number(year)` coarse is recommended if you intend to not do optimizations.
+Export the assembly to GLTF, the normal naming scheme for models is `team name or number(year)`. For resolution, use Medium if you intend to optimize, and Coarse if you don't.
 
 <img src="/img/lynk/onshapeexport.png" alt="Onshape Export" width="65%"/>
 <p></p>
@@ -33,11 +33,11 @@ GLTF files keep the file structure as it is in CAD, meaning subassemblies are se
 If you're new to Blender, you can find the official UI docs [here](https://docs.blender.org/manual/en/latest/interface/index.html).
 :::
 
-Now we will open the model in Blender by simply dragging it on to the Blender window. Remember to delete the light, camera, and cube that are in the scene by default. I also highly recommend checking Merge Vertices, Onshape tends to generate duplicate vertices and this is a free optimization.
+Now open the model in Blender by simply dragging it on to the Blender window. Remember to delete the light, camera, and cube that are in the scene by default. Be sure to check Merge Vertices, as Onshape tends to generate duplicate vertices and this is a free optimization.
 
 :::info
 
-This takes a while and will frequently report NOT RESPONDING, on windows, just give it time, unless the window closes itself something is happening. Robot models are big.
+This is quite a laggy process, so be patient. It will frequently claim it is not responding, but it will eventually finish.
 
 :::
 
@@ -71,19 +71,24 @@ If you are familiar with Blender, now is your chance to optimize the model. The 
 <Tabs>
   <TabItem value="simple" label="Basic">
     If you're looking to optimize quickly and move on to Unity:
-    1.  Select all objects, press tab to enter edit mode (this may take a bit to load) 
-    2. Type `M` and select `By Distance` in the menu that pops up to merge vertices
-    3. Go into the modifiers tab (the blue wrench), and add the following modifiers:
-        - Limited dissolve
-        - Decimate
-        - Weighted normal
-    4. This will apply the modifiers to the active object (the bright orange one). You can copy it to everything else by pressing `Ctrl-L` and selecting `Copy Modifiers`
+    1.  Select a part with the mouse and then click A to select all. In the top left corner, click the object mode button and switch to Edit Mode (or press `tab`). This will lag significantly upon first open.
+    2. In edit mode, click M and select Merge by Distance from the new menu. This is again, quite laggy the first time. Once finished, in the bottom left a `> Merge by Distance` will appear. Select it and change merge distance to 0.0001m, it will reperform the merge.
 
-    :::note
+    <img src="/img/modeling/BlenderMergeByDistance.png" alt="Check floor alignment" width="60%"/>
 
-    This will allow for a very minor decimation compared to doing it properly (final decimate of ~0.9)
+    3. Staying in edit mode, click X, then select Limited Dissolve from the new menu. This is also quite laggy. Once finished, in the bottom left a `> Limited Dissolve` will appear. Select it and change `Max Angle` to 5. it will reperform the dissolve.
 
-    :::
+        <img src="/img/modeling/BlenderLimitedDissolve.png" alt="Check floor alignment" width="90%"/>
+
+    4. Exit edit mode back to object mode. From the right side of the screen, select the Modifier tab (the wrench icon). While holding alt, click the add modifier button and then select `Generate -> Decimate` from the menu. Then Add `Normals -> Smooth By Angle`, and `Normals -> Weighted Normal`. While holding alt, enable `Keep Sharp` on the weighted normal.
+
+    <img src="/img/modeling/BlenderDecimate.png" alt="Check floor alignment" width="50%"/>
+
+    5. On the top right, click the third dropdown from the center `Viewport Overlays` and enable Statistics. Your goal is to get the bottom `Triangles` number below 1 million, but the lower the better.
+
+    <img src="/img/modeling/BlenderViewportOverlays.png" alt="Check floor alignment" width="45%"/>
+
+    6. In the Modifier tab, hold alt and select `Ratio`, lower it to about 0.5 as a starting point, then click enter (no longer holding alt). this will recompute the decimate modifier. Continue to lower `Ratio` until you get the Triangles number below 1 million. This may cause some parts to become significantly deformed. You can simply select them individually and increase the ratio until it looks good again. if parts are not visible or are unneccesary, they can be deleted.
   </TabItem>
   <TabItem value="advanced" label="Advanced">
     This is the overview of how high poly robots are optimized for the base game. The exact process is up to the user, as long as the end result is the same.
@@ -156,7 +161,8 @@ If you are familiar with Blender, now is your chance to optimize the model. The 
 
 ## Export from Blender
 
-Once you are happy click `File -> Export -> FBX`, then export to `[Team Number]([Year]).fbx`
-You can now close Blender, and delete the `.gltf` file.
+Once you are happy click `File -> Export -> FBX`, then export to `[Team Number]([Year]).fbx`. You can now close Blender, and delete the `.gltf` file.
+
+<img src="/img/modeling/ExportFBX.png" alt="Check floor alignment" width="85%"/>
 
 You can now open the MoSim project in Unity
