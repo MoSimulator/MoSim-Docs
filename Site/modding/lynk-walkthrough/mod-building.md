@@ -4,6 +4,12 @@ sidebar_position: 9
 
 # Mod Building
 
+## Automatically Building
+
+- For easy building, [use this tool](https://github.com/MoSim-Modding-Fun/v25-Mod-Builder) made by [Seb](https://github.com/dfn-slxxp). Follow the docs on the tool to use it.
+
+## Manual Building
+
 - Go to `Window/Asset Management/Addressables/Groups`
 
 ![Find Groups Here](@site/static/img/lynk/addressablegroup.png)
