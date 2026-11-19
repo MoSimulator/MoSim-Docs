@@ -89,6 +89,30 @@ The editor takes a long time to download.
 
 <img src="/img/installunity.png" alt="Unity Hub Modules" width="75%"/>
 
+### Linux Setup
+
+The first time you open the project on Linux, Unity asks whether to enter Safe Mode. Click `Ignore`.
+
+<img src="/img/linux/safe-mode.png" alt="Enter Safe Mode prompt" width="60%"/>
+
+The console then shows this compile error:
+
+```
+error CS0246: The type or namespace name 'Steamworks' could not be found (are you missing a using directive or an assembly reference?)
+```
+
+The Steamworks plugin is set to load in the editor only on macOS, so Linux can't find it. To fix that:
+
+1. In the Project window, go to `Assets > Plugins > Facepunch.Steamworks`.
+2. Select `Facepunch.Steamworks.Posix.dll`.
+
+<img src="/img/linux/plugin-folder.png" alt="Facepunch.Steamworks plugin folder" width="100%"/>
+
+3. In the Inspector, open the editor tab under `Platform settings` and change `OS` from `macOS` to `Linux`.
+4. Click `Apply` and let the scripts recompile. The error should clear.
+
+<img src="/img/linux/plugin-os.png" alt="Plugin OS set to Linux" width="40%"/>
+
 ## Updating
 
 * If you used Github Desktop to install, simply fetch from upstream, then pull the origin on the GitHub Desktop app
