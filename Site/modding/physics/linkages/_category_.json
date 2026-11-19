@@ -1,0 +1,8 @@
+{
+  "label": "Linkages",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Documentation for creating different types of linkages"
+  }
+}

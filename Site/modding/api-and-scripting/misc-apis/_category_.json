@@ -1,0 +1,8 @@
+{
+  "label": "Misc APIs",
+  "position": 5,
+  "link": {
+    "type": "generated-index",
+    "description": "Additional APIs for sounds, specific games, and more"
+  }
+}

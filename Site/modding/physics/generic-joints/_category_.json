@@ -1,0 +1,9 @@
+{
+  "label": "Generic Joints",
+  "position": 8,
+  "link": {
+    "type": "generated-index",
+    "slug": "/physics/generic-joints",
+    "description": "Set up linear and angular generic joints"
+  }
+}

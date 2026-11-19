@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="250" viewBox="0 0 920 250" role="img" aria-labelledby="title desc">
+  <title id="title">PID feedback loop</title>
+  <desc id="desc">Target position is compared with measured position. The PID controller sends a velocity command to the joint, whose measured position feeds back.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill="#3567a8"/></marker>
+    <style>
+      text{font-family:Segoe UI,Arial,sans-serif;fill:#17324d}.box{fill:#eef5fc;stroke:#3567a8;stroke-width:2}.line{fill:none;stroke:#3567a8;stroke-width:3;marker-end:url(#arrow)}.label{font-size:17px;font-weight:600}.small{font-size:14px;fill:#40566c}
+    </style>
+  </defs>
+  <rect width="920" height="250" rx="18" fill="#fbfdff"/>
+  <rect class="box" x="35" y="72" width="145" height="70" rx="12"/>
+  <text class="label" x="107" y="102" text-anchor="middle">Target</text><text class="small" x="107" y="125" text-anchor="middle">position</text>
+  <circle cx="225" cy="107" r="23" fill="#fff" stroke="#3567a8" stroke-width="2"/><text class="label" x="225" y="114" text-anchor="middle">−</text><text class="label" x="225" y="80" text-anchor="middle">+</text>
+  <rect class="box" x="280" y="72" width="170" height="70" rx="12"/>
+  <text class="label" x="365" y="101" text-anchor="middle">PID</text><text class="small" x="365" y="124" text-anchor="middle">P + I + D</text>
+  <rect class="box" x="530" y="72" width="170" height="70" rx="12"/>
+  <text class="label" x="615" y="101" text-anchor="middle">Joint</text><text class="small" x="615" y="124" text-anchor="middle">velocity command</text>
+  <rect class="box" x="770" y="72" width="120" height="70" rx="12"/>
+  <text class="label" x="830" y="101" text-anchor="middle">Position</text><text class="small" x="830" y="124" text-anchor="middle">measurement</text>
+  <path class="line" d="M180 107H197"/><path class="line" d="M248 107H278"/><path class="line" d="M450 107H528"/><path class="line" d="M700 107H768"/>
+  <path class="line" d="M830 142V200H225V132"/>
+  <text class="small" x="513" y="224" text-anchor="middle">Feedback closes the loop on the next controller update</text>
+</svg>
